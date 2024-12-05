@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS Produto (
+    id INT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    preco DOUBLE NOT NULL
+);

@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS Ingrediente (
+    id INT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    quantidade DOUBLE NOT NULL
+);

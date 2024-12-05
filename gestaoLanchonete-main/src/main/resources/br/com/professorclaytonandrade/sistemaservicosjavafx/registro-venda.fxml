@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.professorclaytonandrade.sistemaservicosjavafx.controller.VendaController">
+  <children>
+    <VBox spacing="15.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <children>
+        <Label fx:id="tituloLabel" text="Registro de Venda" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="10.0" vgap="10.0">
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200.0" />
+          </columnConstraints>
+
+          <children>
+            <Label fx:id="dataLabel" text="Data:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <DatePicker fx:id="dataPicker" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <Label fx:id="produtoLabel" text="Produto:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <ComboBox fx:id="produtoComboBox" prefWidth="200.0" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+            <Label fx:id="quantidadeLabel" text="Quantidade:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <TextField fx:id="quantidadeTextField" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+            <Label fx:id="precoTotalLabel" text="Preço Total:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <TextField fx:id="precoTotalTextField" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+          </children>
+        </GridPane>
+
+        <HBox spacing="10.0" alignment="CENTER_RIGHT">
+          <children>
+            <Button fx:id="limparButton" text="Limpar" onAction="#handleLimpar" />
+            <Button fx:id="salvarButton" text="Salvar" onAction="#handleSalvar" defaultButton="true" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
